@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const BASE = "https://www.ssbwings.com";
-const ROUTES = ["", "/about", "/ssb-process", "/courses", "/gallery", "/testimonials", "/contact"];
+const ROUTES = ["", "/about", "/ssb-process", "/entries", "/courses", "/gallery", "/testimonials", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((r) => ({

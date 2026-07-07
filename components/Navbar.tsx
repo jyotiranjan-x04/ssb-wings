@@ -36,7 +36,7 @@ export default function Navbar() {
           scrolled ? "max-h-0 overflow-hidden opacity-0" : "max-h-12 opacity-100"
         }`}
       >
-        <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-4 px-4 py-1.5 text-xs sm:px-8">
+        <div className="mx-auto flex max-w-[1840px] items-center justify-between gap-4 px-4 py-1.5 text-xs sm:px-8">
           <p className="hidden font-medium tracking-wide sm:block">
             🎖️ Champions of Discipline, Dedication &amp; Determination
           </p>
@@ -52,7 +52,7 @@ export default function Navbar() {
         aria-label="Primary"
         className="relative border-b border-[rgba(43,36,22,0.12)] bg-[linear-gradient(180deg,#fffdf7,#f4ecd8)] shadow-[0_6px_18px_-10px_rgba(43,36,22,0.4)]"
       >
-        <div className="mx-auto flex max-w-[92rem] items-center justify-between px-4 py-2.5 sm:px-8">
+        <div className="mx-auto flex max-w-[1840px] items-center justify-between px-4 py-2.5 sm:px-8">
           <Link href="/" className="flex items-center gap-3" aria-label="SSB Wings home">
             <span className="medal">
               <Image
@@ -74,14 +74,14 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <ul className="hidden items-center gap-6 lg:flex">
+          <ul className="hidden items-center gap-4 xl:flex 2xl:gap-6">
             {NAV_LINKS.map((l) => {
               const active = pathname === l.href;
               return (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={`nav-link font-display text-sm font-semibold uppercase tracking-wider text-ink hover:text-saffron-600 ${
+                    className={`nav-link whitespace-nowrap font-display text-base font-semibold uppercase tracking-wide text-ink hover:text-saffron-600 ${
                       active ? "is-active text-saffron-700" : ""
                     }`}
                   >
@@ -93,12 +93,12 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-3">
-            <button onClick={openModal} className="btn btn-gold btn-shine hidden px-5 py-2.5 text-sm sm:inline-flex">
-              Free Counselling
+            <button onClick={openModal} className="btn btn-gold btn-shine hidden px-5 py-2.5 text-sm xl:inline-flex">
+              Enquire
             </button>
             <button
               onClick={() => setOpen(!open)}
-              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg border border-[rgba(43,36,22,0.2)] bg-paper text-saffron-700 shadow-[var(--shadow-raised)] lg:hidden"
+              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg border border-[rgba(43,36,22,0.2)] bg-paper text-saffron-700 shadow-[var(--shadow-raised)] xl:hidden"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
@@ -110,7 +110,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <div className={`grid overflow-hidden transition-[grid-template-rows] duration-300 lg:hidden ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+        <div className={`grid overflow-hidden transition-[grid-template-rows] duration-300 xl:hidden ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
           <div className="overflow-hidden">
             <ul className="space-y-1 border-t border-[rgba(43,36,22,0.12)] px-4 py-4">
               {NAV_LINKS.map((l) => (

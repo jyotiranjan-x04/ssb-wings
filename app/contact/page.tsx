@@ -22,7 +22,7 @@ export default function ContactPage() {
       <ContactSection />
 
       <section className="pb-8">
-        <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+        <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
           <div className="photo-frame overflow-hidden">
             <iframe
               title="SSB Wings location — Noida Sector 62"

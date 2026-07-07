@@ -51,9 +51,9 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="relative mx-auto grid max-w-[92rem] items-center gap-12 px-4 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:pt-20">
-        {/* Left — copy */}
-        <div>
+      <div className="relative mx-auto grid max-w-[1840px] items-center gap-12 px-4 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:pt-20">
+        {/* Left — copy (below the images on mobile) */}
+        <div className="order-2 lg:order-1">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(43,36,22,0.14)] bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-ink-soft shadow-[var(--shadow-raised)]">
             <span className="chakra text-[14px]" aria-hidden /> Noida Sector 62 · Mentored by Ex-SSB Officers
           </div>
@@ -89,8 +89,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — photo collage: pipping ceremony + marching contingent */}
-        <div className="relative mx-auto w-full max-w-lg pb-10 sm:max-w-none sm:pb-16 lg:pb-8">
+        {/* Right — photo collage: pipping ceremony + marching contingent (first on mobile) */}
+        <div className="relative order-1 mx-auto w-full max-w-lg pb-10 sm:max-w-none sm:pb-16 lg:order-2 lg:pb-8">
           {/* Main — commissioning "pipping" ceremony */}
           <div className="photo-frame card-lift relative z-10 w-full sm:ml-auto sm:w-[92%] sm:-rotate-2">
             <div>
@@ -129,7 +129,7 @@ export default function Hero() {
       </div>
 
       {/* Stat plates */}
-      <div className="relative mx-auto -mb-10 grid max-w-[92rem] grid-cols-2 gap-4 px-4 pb-4 sm:px-8 md:grid-cols-4">
+      <div className="relative mx-auto -mb-10 grid max-w-[1840px] grid-cols-2 gap-4 px-4 pb-4 sm:px-8 md:grid-cols-4">
         {[
           { value: 677, label: "Recommendations" },
           { value: 3450, label: "Alumni Family" },

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-navy-950 text-paper">
       <div className="tricolour-bar h-1.5 w-full" aria-hidden />
-      <div className="mx-auto max-w-[92rem] px-4 py-16 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 py-16 sm:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="flex items-center gap-3">
@@ -81,11 +81,11 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-navy-800">
-        <div className="mx-auto flex max-w-[92rem] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-200/70 sm:flex-row sm:px-8">
+        <div className="mx-auto flex max-w-[1840px] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-200/70 sm:flex-row sm:px-8">
           <p>© {new Date().getFullYear()} SSB WINGS. All rights reserved.</p>
           <p>Champions of Discipline, Dedication &amp; Determination 🇮🇳</p>
         </div>
-        <p className="mx-auto max-w-[92rem] px-4 pb-5 text-center text-xs text-navy-200/70 sm:px-8">
+        <p className="mx-auto max-w-[1840px] px-4 pb-5 text-center text-xs text-navy-200/70 sm:px-8">
           Developed with <span className="text-red-500" aria-hidden>❤</span> by{" "}
           <a
             href="https://jyotiranjansahoo.vercel.app/"

@@ -10,7 +10,7 @@ export default function Courses({ heading = true }: { heading?: boolean }) {
   const { open } = useContactModal();
   return (
     <section id="courses" className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         {heading && (
           <SectionHeading
             center

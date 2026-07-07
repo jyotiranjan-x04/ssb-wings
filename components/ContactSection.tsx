@@ -5,7 +5,7 @@ import { SITE } from "@/lib/data";
 export default function ContactSection() {
   return (
     <section id="contact" className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <Reveal direction="left">
             <p className="kicker">Report for Duty</p>

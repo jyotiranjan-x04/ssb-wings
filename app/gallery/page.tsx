@@ -26,7 +26,7 @@ export default function GalleryPage() {
       <StudentWall heading={false} />
 
       <section className="pt-4">
-        <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+        <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
           <SectionHeading center kicker="Now Serving" title={<>Our Alumni in <span className="tricolour-text">Uniform</span></>} subtitle="From aspirant to commissioned officer — a few of the many who now serve the nation." />
         </div>
       </section>

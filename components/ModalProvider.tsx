@@ -24,14 +24,24 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
   const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);
 
-  // Auto-open once per session, a few seconds after load
+  // Auto-open the enquiry popup shortly after the preloader finishes.
+  // Fires once per page load (event-driven, with a timed fallback).
   useEffect(() => {
-    if (sessionStorage.getItem("ssbw_popup_seen")) return;
-    const t = setTimeout(() => {
-      setIsOpen(true);
-      sessionStorage.setItem("ssbw_popup_seen", "1");
-    }, 4500);
-    return () => clearTimeout(t);
+    let opened = false;
+    let openTimer: ReturnType<typeof setTimeout>;
+    const trigger = () => {
+      if (opened) return;
+      opened = true;
+      openTimer = setTimeout(() => setIsOpen(true), 900);
+    };
+    window.addEventListener("ssbw:loaded", trigger, { once: true });
+    // Fallback in case the loader was already gone before we mounted
+    const fallback = setTimeout(trigger, 5000);
+    return () => {
+      window.removeEventListener("ssbw:loaded", trigger);
+      clearTimeout(fallback);
+      clearTimeout(openTimer);
+    };
   }, []);
 
   useEffect(() => {

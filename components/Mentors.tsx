@@ -6,7 +6,7 @@ import { MENTORS } from "@/lib/data";
 export default function Mentors({ heading = true }: { heading?: boolean }) {
   return (
     <section id="mentors" className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         {heading && (
           <SectionHeading
             center

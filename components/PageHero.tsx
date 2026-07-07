@@ -22,7 +22,7 @@ export default function PageHero({
       </div>
       <div className="tricolour-bar absolute inset-x-0 top-0 h-1.5" aria-hidden />
 
-      <div className="relative mx-auto max-w-[92rem] px-4 py-16 sm:px-8 sm:py-24">
+      <div className="relative mx-auto max-w-[1840px] px-4 py-16 sm:px-8 sm:py-24">
         <nav className="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ink-soft" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-saffron-700">Home</Link>
           <span aria-hidden>›</span>

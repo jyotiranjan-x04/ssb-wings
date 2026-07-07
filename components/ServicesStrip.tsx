@@ -52,7 +52,7 @@ const SERVICES = [
 export default function ServicesStrip() {
   return (
     <section className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         <SectionHeading
           center
           kicker="Four Forces · One Dream"

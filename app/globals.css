@@ -112,9 +112,18 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 7rem;
   overflow-x: clip;
   max-width: 100%;
+}
+
+/* Larger, more immersive typography on desktop. Containers are fixed px,
+   so this scales type + spacing without widening the layout. */
+@media (min-width: 1280px) {
+  html { font-size: 115%; }   /* ~18.4px base */
+}
+@media (min-width: 1680px) {
+  html { font-size: 121%; }   /* ~19.4px base */
 }
 
 body {

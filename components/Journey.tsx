@@ -17,7 +17,7 @@ export default function Journey({ heading = true }: { heading?: boolean }) {
 
   return (
     <section id="journey" className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         {heading && (
           <SectionHeading
             center

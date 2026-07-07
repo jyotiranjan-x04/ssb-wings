@@ -33,7 +33,7 @@ export default function AboutPage() {
       />
 
       <section className="relative py-20 sm:py-24">
-        <div className="mx-auto grid max-w-[92rem] items-center gap-12 px-4 sm:px-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-[1840px] items-center gap-12 px-4 sm:px-8 lg:grid-cols-2">
           <Reveal direction="left">
             <p className="kicker">The Mission</p>
             <h2 className="section-title mt-4 text-4xl sm:text-5xl">From Aspirant to <span className="tricolour-text">Officer</span></h2>
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       <section className="relative py-16">
-        <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+        <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
           <SectionHeading center kicker="What We Stand For" title={<>Our <span className="tricolour-text">Core Values</span></>} />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {VALUES.map((v, i) => (

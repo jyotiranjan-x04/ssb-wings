@@ -6,7 +6,7 @@ import { AIR_CARDS } from "@/lib/data";
 export default function AchievementCards() {
   return (
     <section className="relative py-20 sm:py-24">
-      <div className="mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="mx-auto max-w-[1840px] px-4 sm:px-8">
         <SectionHeading
           center
           kicker="All India Rank Holders"

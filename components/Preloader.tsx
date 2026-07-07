@@ -19,6 +19,7 @@ export default function Preloader() {
       setTimeout(() => {
         setDone(true);
         document.body.style.overflow = "";
+        window.dispatchEvent(new Event("ssbw:loaded"));
         setTimeout(() => setRemoved(true), 750);
       }, wait);
     };
@@ -59,7 +60,7 @@ export default function Preloader() {
       </h1>
 
       <p
-        className="preloader-letter mt-3 font-display text-base uppercase tracking-[0.45em] text-white/90 [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] sm:text-xl"
+        className="preloader-letter mt-3 max-w-[90vw] text-center font-display text-base uppercase tracking-[0.4em] text-white/90 [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] sm:text-xl"
         style={{ animationDelay: "1200ms" }}
       >
         We give shape to your Dreams

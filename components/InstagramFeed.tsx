@@ -10,7 +10,7 @@ export default function InstagramFeed() {
         style={{ background: "linear-gradient(135deg,#fff4e6 0%, #faf6ec 45%, #e9f7e9 100%)" }}
         aria-hidden
       />
-      <div className="relative mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="relative mx-auto max-w-[1840px] px-4 sm:px-8">
         <SectionHeading
           center
           kicker="@ssbwings on Instagram"

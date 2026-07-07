@@ -24,7 +24,7 @@ export default function StatsStrip() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg,#fff8ec,#f3ecd9)" }} />
       </div>
 
-      <div className="relative mx-auto max-w-[92rem] px-4 sm:px-8">
+      <div className="relative mx-auto max-w-[1840px] px-4 sm:px-8">
         <Reveal className="text-center">
           <p className="kicker justify-center">Proof, Not Promises</p>
           <h2 className="section-title mt-4 text-4xl sm:text-5xl">The Scoreboard <span className="tricolour-text">Speaks</span></h2>

@@ -310,10 +310,101 @@ export const FAQS = [
   },
 ];
 
+export type JoinRoute = {
+  name: string;
+  stage: "After 10+2" | "After Graduation" | "For Serving Personnel";
+  who: string;
+  how: string;
+  commission: string;
+};
+
+export const JOIN_ROUTES: {
+  id: string;
+  name: string;
+  motto: string;
+  grad: string;
+  image: string;
+  academy: string;
+  intro: string;
+  routes: JoinRoute[];
+}[] = [
+  {
+    id: "army",
+    name: "Indian Army",
+    motto: "Service Before Self",
+    grad: "linear-gradient(160deg,#5a6b2b,#3a4019)",
+    image: "/images/services/army-op.jpg",
+    academy: "IMA Dehradun · OTA Gaya/Chennai",
+    intro: "The largest of the three services offers the widest range of officer entries — straight after school, after graduation, or from the ranks.",
+    routes: [
+      { name: "NDA & NA", stage: "After 10+2", who: "Unmarried men & women, 16½–19½ yrs. Any stream (PCM for tech).", how: "UPSC written → SSB Interview → Medical", commission: "Permanent · via NDA then IMA" },
+      { name: "10+2 TES (Technical Entry Scheme)", stage: "After 10+2", who: "Unmarried men, 16½–19½ yrs. 10+2 with PCM (min 60% aggregate).", how: "Shortlist on JEE Mains score → SSB → Medical (no written)", commission: "Permanent · 4-yr B.Tech, OTA Gaya" },
+      { name: "CDS – IMA", stage: "After Graduation", who: "Unmarried men, 19–24 yrs. Any graduate.", how: "UPSC CDS written → SSB → Medical", commission: "Permanent · IMA Dehradun" },
+      { name: "CDS – OTA (SSC)", stage: "After Graduation", who: "Men & women, 19–25 yrs. Any graduate.", how: "UPSC CDS written → SSB → Medical", commission: "Short Service · OTA Chennai" },
+      { name: "TGC (Technical Graduate Course)", stage: "After Graduation", who: "Unmarried men, 20–27 yrs. Engineering degree.", how: "Shortlist on merit → SSB → Medical", commission: "Permanent · IMA" },
+      { name: "SSC (Tech) – Men & Women", stage: "After Graduation", who: "Men & women, 20–27 yrs. Engineering degree.", how: "Shortlist on merit → SSB → Medical", commission: "Short Service · OTA" },
+      { name: "NCC Special Entry", stage: "After Graduation", who: "Men & women with NCC 'C' certificate (min B grade).", how: "NCC Directorate slot → SSB → Medical (no written)", commission: "Short Service · OTA" },
+      { name: "JAG (Judge Advocate General)", stage: "After Graduation", who: "Men & women, 21–27 yrs. LLB (min 55%).", how: "Shortlist → SSB → Medical", commission: "Short Service · OTA" },
+      { name: "ACC & SCO", stage: "For Serving Personnel", who: "Serving soldiers of the Army meeting service & education criteria.", how: "Departmental written exam → SSB → Medical", commission: "Permanent · via ACC / direct" },
+    ],
+  },
+  {
+    id: "navy",
+    name: "Indian Navy",
+    motto: "Śaṁ No Varuṇaḥ",
+    grad: "linear-gradient(160deg,#22508f,#142c52)",
+    image: "/images/services/navy-op.jpg",
+    academy: "INA Ezhimala",
+    intro: "Command warships, fly naval aircraft or run the technical backbone of the fleet — the Navy commissions officers across executive, technical and specialist branches.",
+    routes: [
+      { name: "NDA (Naval)", stage: "After 10+2", who: "Unmarried men & women, 16½–19½ yrs. 10+2 with PCM.", how: "UPSC written → SSB → Medical", commission: "Permanent · NDA then INA" },
+      { name: "10+2 (B.Tech) Cadet Entry", stage: "After 10+2", who: "Unmarried men, 10+2 PCM (min 70%) with valid JEE Mains.", how: "Shortlist on JEE Mains → SSB → Medical", commission: "Permanent · 4-yr B.Tech at INA" },
+      { name: "CDS (Navy)", stage: "After Graduation", who: "Unmarried men, 19–24 yrs. Engineering degree.", how: "UPSC CDS written → SSB → Medical", commission: "Permanent · INA" },
+      { name: "SSC Executive (GS/X) & Technical", stage: "After Graduation", who: "Men & women. Graduates / engineering graduates.", how: "Shortlist on eligibility → SSB → Medical", commission: "Short Service" },
+      { name: "SSC Pilot / Observer", stage: "After Graduation", who: "Men & women graduates meeting flying standards.", how: "SSB → PABT (Pilot Aptitude) → Medical", commission: "Short Service · Aviation" },
+      { name: "SSC Logistics / ATC / Education / Law", stage: "After Graduation", who: "Men & women with the relevant degree.", how: "Shortlist → SSB → Medical", commission: "Short Service · Specialist" },
+      { name: "NCC Special Entry (Navy)", stage: "After Graduation", who: "Graduates with NCC (Naval Wing) 'C' certificate.", how: "NCC slot → SSB → Medical", commission: "Short Service" },
+    ],
+  },
+  {
+    id: "airforce",
+    name: "Indian Air Force",
+    motto: "Touch the Sky with Glory",
+    grad: "linear-gradient(160deg,#3f92cf,#235f94)",
+    image: "/images/services/airforce-op.jpg",
+    academy: "AFA Dundigal, Hyderabad",
+    intro: "Fly fighters and transports, or lead the technical and administrative branches that keep the IAF airborne — every branch begins with the AFSB.",
+    routes: [
+      { name: "NDA (Air)", stage: "After 10+2", who: "Unmarried men & women, 16½–19½ yrs. 10+2 with PCM.", how: "UPSC written → AFSB → PABT/CPSS → Medical", commission: "Permanent · NDA then AFA" },
+      { name: "AFCAT – Flying Branch", stage: "After Graduation", who: "Men & women, 20–24 yrs. Graduate (with PCM at 10+2).", how: "AFCAT written → AFSB → PABT → Medical", commission: "Short Service · Flying" },
+      { name: "AFCAT – Ground Duty (Tech)", stage: "After Graduation", who: "Men & women, 20–26 yrs. Engineering degree.", how: "AFCAT written → AFSB → Medical", commission: "Permanent / Short Service" },
+      { name: "AFCAT – Ground Duty (Non-Tech)", stage: "After Graduation", who: "Men & women graduates (Admin, Logistics, Accounts, etc.).", how: "AFCAT written → AFSB → Medical", commission: "Short Service" },
+      { name: "NCC Special Entry (Flying)", stage: "After Graduation", who: "Graduates with NCC Air Wing Senior Div 'C' certificate.", how: "NCC slot → AFSB → PABT → Medical (no AFCAT)", commission: "Flying Branch" },
+      { name: "Meteorology Entry", stage: "After Graduation", who: "Post-graduates in science / maths streams.", how: "AFCAT written → AFSB → Medical", commission: "Ground Duty · Met branch" },
+    ],
+  },
+  {
+    id: "coastguard",
+    name: "Indian Coast Guard",
+    motto: "Vayam Rakshamah",
+    grad: "linear-gradient(160deg,#22608f,#123852)",
+    image: "/images/services/coastguard-op.jpg",
+    academy: "ICG Academy, Mangaluru",
+    intro: "Guard India's coastline and maritime interests as an Assistant Commandant — the Coast Guard's officer entry across general duty, pilot, navigator and technical branches.",
+    routes: [
+      { name: "Assistant Commandant – General Duty", stage: "After Graduation", who: "Men, 21–25 yrs. Graduate with maths & physics at 10+2.", how: "CGCAT written → Preliminary & Final Selection Board → Medical", commission: "Permanent" },
+      { name: "AC – GD (Pilot / Navigator)", stage: "After Graduation", who: "Men & women graduates meeting flying/navigation standards.", how: "CGCAT → Selection Board → PABT → Medical", commission: "Permanent · Aviation" },
+      { name: "AC – Technical (Engineering)", stage: "After Graduation", who: "Men, engineering graduates (Naval Arch / Mech / Electrical, etc.).", how: "CGCAT → Selection Board → Medical", commission: "Permanent · Tech" },
+      { name: "AC – Commercial Pilot / Law / Others", stage: "After Graduation", who: "Candidates with the relevant qualification (CPL, LLB, etc.).", how: "Notification-based shortlist → Selection Board → Medical", commission: "Permanent / Short Service" },
+    ],
+  },
+];
+
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/ssb-process", label: "The 5-Day SSB" },
+  { href: "/ssb-process", label: "5-Day SSB" },
+  { href: "/entries", label: "Entries" },
   { href: "/courses", label: "Courses" },
   { href: "/gallery", label: "Gallery" },
   { href: "/testimonials", label: "Testimonials" },
