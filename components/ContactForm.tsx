@@ -36,29 +36,33 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
     }
   }
 
+  const labelCls = compact
+    ? "mb-1 block font-display text-xs font-bold uppercase tracking-wider text-ink"
+    : "mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink";
+
   return (
-    <form onSubmit={onSubmit} aria-label="Enquiry form" className="space-y-4">
-      <div className={compact ? "space-y-4" : "grid gap-4 sm:grid-cols-2"}>
+    <form onSubmit={onSubmit} aria-label="Enquiry form" className={compact ? "space-y-3" : "space-y-4"}>
+      <div className={compact ? "grid grid-cols-2 gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <div>
-          <label htmlFor="cf-name" className="mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink">
+          <label htmlFor="cf-name" className={labelCls}>
             Full Name *
           </label>
           <input id="cf-name" name="name" required minLength={2} maxLength={80} placeholder="e.g. Arjun Singh" className="field" />
         </div>
         <div>
-          <label htmlFor="cf-phone" className="mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink">
+          <label htmlFor="cf-phone" className={labelCls}>
             Phone *
           </label>
           <input id="cf-phone" name="phone" type="tel" required pattern="[0-9+\-\s]{10,15}" placeholder="+91 XXXXX XXXXX" className="field" />
         </div>
         <div>
-          <label htmlFor="cf-email" className="mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink">
+          <label htmlFor="cf-email" className={labelCls}>
             Email *
           </label>
           <input id="cf-email" name="email" type="email" required placeholder="you@example.com" className="field" />
         </div>
         <div>
-          <label htmlFor="cf-entry" className="mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink">
+          <label htmlFor="cf-entry" className={labelCls}>
             Target Entry *
           </label>
           <select id="cf-entry" name="entry" required defaultValue="" className="field">
@@ -68,7 +72,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
         </div>
       </div>
       <div>
-        <label htmlFor="cf-msg" className="mb-1.5 block font-display text-sm font-bold uppercase tracking-wider text-ink">
+        <label htmlFor="cf-msg" className={labelCls}>
           Message
         </label>
         <textarea id="cf-msg" name="message" rows={compact ? 2 : 3} maxLength={2000} placeholder="Attempt history, Board date, or any question…" className="field resize-y" />

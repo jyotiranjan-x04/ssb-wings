@@ -117,13 +117,14 @@ html {
   max-width: 100%;
 }
 
-/* Larger, more immersive typography on desktop. Containers are fixed px,
-   so this scales type + spacing without widening the layout. */
+/* Slightly larger, immersive typography on desktop. Containers are fixed px,
+   so this scales type + spacing without widening the layout. Kept modest so
+   the hero fits within a single viewport. */
 @media (min-width: 1280px) {
-  html { font-size: 115%; }   /* ~18.4px base */
+  html { font-size: 104%; }   /* ~16.6px base */
 }
 @media (min-width: 1680px) {
-  html { font-size: 121%; }   /* ~19.4px base */
+  html { font-size: 107.5%; } /* ~17.2px base */
 }
 
 body {

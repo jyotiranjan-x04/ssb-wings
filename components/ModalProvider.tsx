@@ -79,25 +79,25 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
               ✕
             </button>
 
-            <div className="max-h-[86vh] overflow-y-auto p-7 sm:p-9">
+            <div className="max-h-[90vh] overflow-y-auto p-5 sm:p-6">
               <div className="flex items-center gap-3">
-                <Image src="/logo.webp" alt="" width={44} height={44} className="h-11 w-11 object-contain" />
+                <Image src="/logo.webp" alt="" width={44} height={44} className="h-10 w-10 object-contain" />
                 <div>
-                  <p className="font-display text-2xl font-extrabold uppercase leading-none tracking-wide gold-text">
+                  <p className="font-display text-xl font-extrabold uppercase leading-none tracking-wide gold-text">
                     Book Free Counselling
                   </p>
-                  <p className="text-xs uppercase tracking-[0.2em] text-ink-soft">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-ink-soft">
                     Talk to a mentor, not a salesperson
                   </p>
                 </div>
               </div>
 
-              <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                Two new batches open every month and seats are limited. Share your
-                details — we&apos;ll map your entry, timeline and battle plan, free of cost.
+              <p className="mt-3 text-sm leading-snug text-ink-soft">
+                New batches open every month — seats are limited. Share your details and
+                we&apos;ll map your entry &amp; timeline, free of cost.
               </p>
 
-              <div className="mt-5">
+              <div className="mt-4">
                 <ContactForm compact />
               </div>
             </div>

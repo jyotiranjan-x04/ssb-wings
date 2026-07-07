@@ -51,14 +51,14 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="relative mx-auto grid max-w-[1840px] items-center gap-12 px-4 pb-16 pt-14 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:pt-20">
+      <div className="relative mx-auto grid max-w-[1840px] items-center gap-8 px-4 pb-10 pt-7 sm:px-8 lg:grid-cols-[1fr_1.08fr] lg:pt-10">
         {/* Left — copy (below the images on mobile) */}
         <div className="order-2 lg:order-1">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(43,36,22,0.14)] bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-ink-soft shadow-[var(--shadow-raised)]">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[rgba(43,36,22,0.14)] bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-ink-soft shadow-[var(--shadow-raised)]">
             <span className="chakra text-[14px]" aria-hidden /> Noida Sector 62 · Mentored by Ex-SSB Officers
           </div>
 
-          <h1 className="section-title text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
+          <h1 className="section-title text-4xl leading-[0.98] sm:text-5xl lg:text-6xl">
             The Uniform Doesn&apos;t
             <br /> Choose Everyone.
             <br />
@@ -66,14 +66,14 @@ export default function Hero() {
             <span className="animate-pulse text-saffron-600">|</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft">
             Five days at the Services Selection Board decide who wears the stars.
             At <strong className="text-ink">SSB WINGS</strong>, ex-SSB assessors rebuild you for
             every one of them — Screening, Psychology, GTO, Interview and Conference —
             until the Board sees what we see: <em>an officer</em>.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center gap-4">
             <button onClick={open} className="btn btn-saffron btn-shine text-base">
               Book Free Counselling
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -83,7 +83,7 @@ export default function Hero() {
             <Link href="/ssb-process" className="btn btn-outline btn-shine">Decode the 5-Day SSB</Link>
           </div>
 
-          <div className="mt-7 flex items-center gap-2 text-sm text-ink-soft">
+          <div className="mt-5 flex items-center gap-2 text-sm text-ink-soft">
             <span className="flex text-gold-500" aria-hidden>★★★★★</span>
             Rated 5.0 on Google by aspirants across India
           </div>
@@ -129,18 +129,18 @@ export default function Hero() {
       </div>
 
       {/* Stat plates */}
-      <div className="relative mx-auto -mb-10 grid max-w-[1840px] grid-cols-2 gap-4 px-4 pb-4 sm:px-8 md:grid-cols-4">
+      <div className="relative mx-auto -mb-8 grid max-w-[1840px] grid-cols-2 gap-3 px-4 pb-4 sm:px-8 md:grid-cols-4">
         {[
           { value: 677, label: "Recommendations" },
           { value: 3450, label: "Alumni Family" },
           { value: 175, label: "NDA Entries" },
           { value: 10, label: "All India Rank 1" },
         ].map((s) => (
-          <div key={s.label} className="skeu-plate card-lift px-5 py-5 text-center">
-            <p className="font-display text-4xl font-black leading-none gold-text sm:text-5xl">
+          <div key={s.label} className="skeu-plate card-lift px-4 py-3.5 text-center">
+            <p className="font-display text-3xl font-black leading-none gold-text sm:text-4xl">
               <Counter target={s.value} />
             </p>
-            <p className="mt-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-soft">{s.label}</p>
+            <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-soft">{s.label}</p>
           </div>
         ))}
       </div>
